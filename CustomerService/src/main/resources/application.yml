@@ -1,0 +1,29 @@
+server:  
+  port: ${PORT:3333}
+
+eureka:  
+  client:
+    serviceUrl:
+      defaultZone: ${DISCOVERY_URL:http://localhost:8761}/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+          
+ribbon:
+  eureka:
+    enabled: true
+    
+    
+spring:  
+  application:
+    name: customer-service
+  h2:
+    console:
+      enabled: true
+      path: /h2
+
+  boot:
+    admin:
+      client:
+        url:
+        - http://localhost:1111                  

@@ -1,0 +1,9 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: hibernate-mapping-spring-rest 
+  h2:
+    console:
+      enabled: true
+      path: /h2
